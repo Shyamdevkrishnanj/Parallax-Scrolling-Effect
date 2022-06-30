@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Shammi Pwoli | KENMARZ</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">Logo</a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="stars.png" id="stars"/>
+            <img src="face.png" id="face"/>
+            <img src="mountains_behind.png" id="mountains_behind"/>
+            <h2 id="text">Kenmarz</h2>
+            <a href="#" id="btn">Explore</a>
+            <img src="mountains_front.png" id="mountains_front"/>
+        </section>
+        <div class="sec">
+            <h2>Parallax Scrolling Effect</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est excepturi accusantium eius error explicabo harum odit quod eaque? Earum dignissimos dolor inventore debitis eos qui voluptatum fuga perspiciatis quis harum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, hic tenetur ducimus doloremque magnam laboriosam, placeat amet esse beatae cum enim nihil. Ducimus incidunt repudiandae culpa. Vitae reprehenderit totam necessitatibus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe placeat est unde quos libero aut mollitia fuga? Sint, molestiae, autem amet ipsam, libero ad sequi odio natus facere voluptatibus architecto!<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est excepturi accusantium eius error explicabo</p>
+        </div>
+
+        <script>
+            let stars = document.getElementById("stars");
+            let face = document.getElementById("face");
+            let mountains_behind = document.getElementById("mountains_behind");
+            let text = document.getElementById("text");
+            let btn = document.getElementById("btn");
+            let mountains_front = document.getElementById("mountains_front");
+            let header = document.querySelector('header');
+
+            window.addEventListener("scroll", function(){
+                let scroll = window.scrollY;
+                stars.style.left = scroll * 0.25 + "px";
+                face.style.top = scroll * 0.25 + "px";
+                mountains_behind.style.top = scroll * 0.5 + "px";
+                mountains_front.style.top = scroll * 0 + "px";
+                text.style.marginRight = scroll * 4 + "px";
+                text.style.marginTop = scroll * 1.5 + "px";
+                btn.style.marginTop = scroll * 1.5 + "px";
+                header.style.Top = scroll * 0.5 + 'px'; 
+            });
+        </script>
+    </body>
+</html>
